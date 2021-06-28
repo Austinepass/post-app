@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, StatusBar, SafeAreaView } from 'react-native';
 
-function Screen({children}) {
+function Screen({children, style}) {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[style, styles.container]}>
         {children}
     </SafeAreaView>
   );
