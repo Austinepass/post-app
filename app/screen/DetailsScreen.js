@@ -1,3 +1,4 @@
+import { useRoute } from '@react-navigation/core';
 import React from 'react';
 import { View, StyleSheet, Image, Text, FlatList} from 'react-native';
 import CommentItem from '../component/CommentItem';
@@ -32,21 +33,22 @@ const users = [
 ];
 
 function DetailsScreen(props) {
+    const route = useRoute()
     const renderItem = ({ item }) => (
 			<CommentItem name={item.name} image={item.picture} subtext={item.email} comment={item.post}/>
 		);
 	return (
 		<View>
-			<Image style={styles.image} source={require("../../assets/girl.jpeg")} />
+			<Image style={styles.image} source={route.params.picture} />
 			<View style={styles.detailsContainer}>
-				<Text style={styles.title}>Kimberly strikes again!</Text>
-				<Text style={styles.subtitle}>This is a test</Text>
+				<Text style={styles.title}>{route.params.post}</Text>
+				<Text style={styles.subtitle}>{route.params.post}</Text>
 			</View>
 			<InputField />
 			<View style={styles.userContainer}>
 				<FlatList
 					data={users}
-					keyExtractor={(users) => users.email}
+					keyExtractor={(user) => user.email}
 					renderItem={renderItem}
 				/>
 			</View>

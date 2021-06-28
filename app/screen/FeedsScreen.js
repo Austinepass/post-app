@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/core";
 import React from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import ListItem from "../component/ListItem";
@@ -32,6 +33,7 @@ const users = [
 
 
 function FeedsScreen(props) {
+    const navigation = useNavigation()
 	const renderItem = ({ item }) => (
 		<ListItem
 			image={item.picture}
@@ -40,7 +42,7 @@ function FeedsScreen(props) {
 			likes={item.likes}
 			post={item.post}
 			date={item.date}
-            onPress={console.log(item)}
+            onPress={() => navigation.navigate('Details', item)}
 		/>
 	);
 	return (

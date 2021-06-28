@@ -1,11 +1,11 @@
 import React from "react";
-import { View, StyleSheet, ImageBackground, Text, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, ImageBackground, Text, Image, TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import NameItem from "./NameItem";
 
 function ListItem({image, name, subtext, post, likes, date, onPress}) {
 	return (
-		<TouchableOpacity onPress={onPress}>
+		<TouchableWithoutFeedback onPress={onPress}>
 			<View style={styles.container}>
 				<NameItem image={image} name={name} subtext={subtext} />
 				<Image style={styles.background} source={image} />
@@ -35,7 +35,7 @@ function ListItem({image, name, subtext, post, likes, date, onPress}) {
 					<Text style={[{ margin: 8 }, styles.grey]}>{date}</Text>
 				</View>
 			</View>
-		</TouchableOpacity>
+		</TouchableWithoutFeedback>
 	);
 }
 
