@@ -14,10 +14,10 @@ function AccountScreen(props) {
 		<View style={styles.container}>
 			<ImageBackground
 				style={styles.background}
-				source={require("../../assets/drip.jpeg")}
+				source={require("../assets/drip.jpeg")}
 				blurRadius={8}>
 				<Image
-					source={require("../../assets/drip.jpeg")}
+					source={require("../assets/drip.jpeg")}
 					style={styles.image}
 				/>
 				<Text style={styles.text}>John Drip</Text>

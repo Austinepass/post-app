@@ -7,7 +7,7 @@ const users = [
 	{
 		name: "Amanda Cruise",
 		email: "amanda.cruise@gmail.com",
-		picture: require("../../assets/girl.jpeg"),
+		picture: require("../assets/girl.jpeg"),
 		likes: 8,
 		date: "May 22 2020 23:27:12",
 		post: "Kimberly strikes again!",
@@ -15,7 +15,7 @@ const users = [
 	{
 		name: "John Craze",
 		email: "john.craze@gmail.com",
-		picture: require("../../assets/drip.jpeg"),
+		picture: require("../assets/drip.jpeg"),
 		likes: 89,
 		date: "May 22 2020 23:27:12",
 		post: "This is not the time for complacencies!",
@@ -24,7 +24,7 @@ const users = [
 	{
 		name: "Uwa Ebuka",
 		email: "ebuka.uwa@gmail.com",
-		picture: require("../../assets/ocean.jpeg"),
+		picture: require("../assets/ocean.jpeg"),
 		likes: 77,
 		date: "May 22 2020 23:27:12",
 		post: "Look! What i found in my garage!",
